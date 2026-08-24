@@ -49,9 +49,7 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 items-center py-16 sm:py-24">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            Fullstack-разработчик:{" "}
-            <span className="text-primary">Django + Next.js</span>, деплой под
-            ключ
+            Fullstack-разработчик
           </h1>
           <p className="text-muted text-lg leading-relaxed">
             Создаю надёжные веб-решения для бизнеса — от архитектуры бэкенда
