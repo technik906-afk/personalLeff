@@ -7,6 +7,8 @@ export type Case = {
   stack: string[];
   url: string;
   kind: CaseKind;
+  desktopImage: string;
+  mobileImage?: string;
 };
 
 export const cases: Case[] = [
@@ -18,6 +20,18 @@ export const cases: Case[] = [
     stack: ["Django", "DRF", "Next.js", "VPS", "ЮKassa"],
     url: "https://uaartist.ru",
     kind: "real",
+    desktopImage: "/images/uaartist-hero.png",
+    mobileImage: "/images/uaartist-mobile-hero.jpg",
+  },
+  {
+    id: "propheters",
+    title: "Лендинг метал-кор группы The Propheters",
+    description:
+      "Медиа-грид на главной, ссылки на стриминги и соцсети, страница контактов.",
+    stack: ["Next.js"],
+    url: "https://propheters.vercel.app",
+    kind: "real",
+    desktopImage: "/images/propheters-hero.png",
   },
   {
     id: "prosvet",
@@ -26,6 +40,8 @@ export const cases: Case[] = [
     stack: ["Next.js", "CSS Modules"],
     url: "https://prosvet.vercel.app",
     kind: "demo",
+    desktopImage: "/images/prosvet-hero.png",
+    mobileImage: "/images/prosvet-mobile-hero.jpg",
   },
   {
     id: "pur-pur-dark",
@@ -34,6 +50,8 @@ export const cases: Case[] = [
     stack: ["Next.js", "CSS Modules"],
     url: "https://pur-pur-dark.vercel.app",
     kind: "demo",
+    desktopImage: "/images/pur-pur-dark-hero.png",
+    mobileImage: "/images/pur-pur-dark-mobile-hero.jpg",
   },
   {
     id: "pur-pur-light",
@@ -42,5 +60,7 @@ export const cases: Case[] = [
     stack: ["Next.js", "CSS Modules"],
     url: "https://pur-pur-cafe-light.vercel.app",
     kind: "demo",
+    desktopImage: "/images/pur-pur-light-hero.png",
+    mobileImage: "/images/pur-pur-light-mobile-hero.jpg",
   },
 ];
