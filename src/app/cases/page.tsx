@@ -4,6 +4,9 @@ import { cases } from "@/data/cases";
 
 export const metadata: Metadata = {
   title: "Кейсы — Лев Алексеев",
+  description:
+    "Примеры разработанных сайтов и интернет-магазинов: uaartist, Propheters и демо-лендинги на Next.js.",
+  alternates: { canonical: "/cases" },
 };
 
 export default function CasesPage() {

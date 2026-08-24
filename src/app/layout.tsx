@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PersonJsonLd from "@/components/PersonJsonLd";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,10 +17,28 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const title = "Лев Алексеев — Fullstack-разработчик";
+const description =
+  "Django + Next.js, деплой и интеграции под ключ. Разработка сайтов и интернет-магазинов на заказ.";
+
 export const metadata: Metadata = {
-  title: "Лев Алексеев — Fullstack-разработчик",
-  description:
-    "Django + Next.js, деплой и интеграции под ключ. Разработка сайтов и интернет-магазинов на заказ.",
+  metadataBase: new URL(SITE_URL),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Лев Алексеев",
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -28,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <PersonJsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

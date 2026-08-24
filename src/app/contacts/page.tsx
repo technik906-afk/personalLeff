@@ -4,6 +4,9 @@ import ContactCard from "@/components/ContactCard";
 
 export const metadata: Metadata = {
   title: "Контакты — Лев Алексеев",
+  description:
+    "Написать разработчику для обсуждения проекта — Telegram или email.",
+  alternates: { canonical: "/contacts" },
 };
 
 export default function ContactsPage() {
