@@ -16,13 +16,13 @@ export default function ContactCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="rounded-lg border border-surface-border bg-surface p-6 flex flex-col gap-4 hover:border-primary transition-colors"
+      className="flex items-center gap-4 rounded-lg border border-surface-border bg-surface p-5 hover:border-primary transition-colors"
     >
-      <span className="flex size-10 items-center justify-center rounded bg-background border border-surface-border text-primary">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-background border border-surface-border text-primary">
         <Icon size={18} />
       </span>
       <div>
-        <div className="text-sm text-muted mb-1">{label}</div>
+        <div className="text-sm text-muted mb-0.5">{label}</div>
         <div className="font-mono text-base">{value}</div>
       </div>
     </a>
