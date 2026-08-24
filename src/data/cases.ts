@@ -22,8 +22,7 @@ export const cases: Case[] = [
   {
     id: "prosvet",
     title: "Лендинг кофейни-пекарни «Просвет»",
-    description:
-      "Демо-лендинг — инициативная работа для питчинга локальному бизнесу, не оплаченный заказ.",
+    description: "Одностраничный сайт: меню, о заведении, контакты.",
     stack: ["Next.js", "CSS Modules"],
     url: "https://prosvet.vercel.app",
     kind: "demo",
@@ -31,8 +30,7 @@ export const cases: Case[] = [
   {
     id: "pur-pur-dark",
     title: "Лендинг кофейни «Пур Пур» — тёмный вариант",
-    description:
-      "Один из двух альтернативных дизайн-концептов, предложенных кофейне на спекулятивной основе.",
+    description: "Одностраничный лендинг: меню, галерея, контакты.",
     stack: ["Next.js", "CSS Modules"],
     url: "https://pur-pur-dark.vercel.app",
     kind: "demo",
@@ -40,8 +38,7 @@ export const cases: Case[] = [
   {
     id: "pur-pur-light",
     title: "Лендинг кофейни «Пур Пур» — светлый вариант",
-    description:
-      "Второй из двух альтернативных дизайн-концептов, предложенных кофейне на спекулятивной основе.",
+    description: "Одностраничный лендинг: меню, галерея, контакты.",
     stack: ["Next.js", "CSS Modules"],
     url: "https://pur-pur-cafe-light.vercel.app",
     kind: "demo",
