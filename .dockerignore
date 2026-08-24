@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.env*
+!.env.example
+.git/
+README.md
+AGENTS.md
+CLAUDE.md
+stitch_fullstack/

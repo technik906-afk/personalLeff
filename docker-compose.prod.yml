@@ -1,0 +1,17 @@
+# Продакшн: standalone Next.js в докере, за nginx из стека uaartist
+# (общая VM, общий nginx — см. deploy/nginx/conf.d/leff-dev.conf в репо uaartist).
+# Запуск на сервере: docker compose -f docker-compose.prod.yml up -d --build
+
+services:
+  app:
+    build: .
+    container_name: leff-dev-app
+    restart: unless-stopped
+    expose:
+      - "3000"
+    networks:
+      - uaartist_default
+
+networks:
+  uaartist_default:
+    external: true
