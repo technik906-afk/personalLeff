@@ -3,9 +3,9 @@ import { Send, Mail, ArrowRight } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 
 export const metadata: Metadata = {
-  title: "Контакты — Лев Алексеев",
+  title: "Написать разработчику — Telegram, email",
   description:
-    "Написать разработчику для обсуждения проекта — Telegram или email.",
+    "Открыт для новых проектов: разработка сайтов и интернет-магазинов под ключ.",
   alternates: { canonical: "/contacts" },
 };
 

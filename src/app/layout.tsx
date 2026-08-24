@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const title = "Лев Алексеев — Fullstack-разработчик";
+const title = "Лев — Fullstack-разработчик";
 const description =
-  "Django + Next.js, деплой и интеграции под ключ. Разработка сайтов и интернет-магазинов на заказ.";
+  "Разработка сайтов и интернет-магазинов на заказ: от архитектуры бэкенда до деплоя на сервере.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -3,7 +3,7 @@ import CaseCard from "@/components/CaseCard";
 import { cases } from "@/data/cases";
 
 export const metadata: Metadata = {
-  title: "Кейсы — Лев Алексеев",
+  title: "Портфолио: реальные проекты на Django и Next.js",
   description:
     "Примеры разработанных сайтов и интернет-магазинов: uaartist, Propheters и демо-лендинги на Next.js.",
   alternates: { canonical: "/cases" },
