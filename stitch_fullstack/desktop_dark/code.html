@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Портфолио | Fullstack-разработчик</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#6ffbbe",
+                      "inverse-primary": "#005ac2",
+                      "secondary": "#bdc7d9",
+                      "on-error-container": "#ffdad6",
+                      "primary": "#adc6ff",
+                      "on-primary-fixed": "#001a42",
+                      "error-container": "#93000a",
+                      "primary-fixed": "#d8e2ff",
+                      "on-secondary-fixed-variant": "#3d4756",
+                      "on-secondary-container": "#afb9cb",
+                      "on-tertiary": "#003824",
+                      "surface-container": "#1c2025",
+                      "surface-container-low": "#181c21",
+                      "surface-container-lowest": "#0a0e13",
+                      "primary-container": "#4d8eff",
+                      "on-primary-fixed-variant": "#004395",
+                      "on-surface-variant": "#c2c6d6",
+                      "inverse-on-surface": "#2d3136",
+                      "surface-tint": "#adc6ff",
+                      "surface-container-highest": "#31353b",
+                      "tertiary-container": "#00a572",
+                      "primary-fixed-dim": "#adc6ff",
+                      "secondary-fixed": "#d9e3f6",
+                      "outline": "#8c909f",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "background": "#101419",
+                      "surface-dim": "#101419",
+                      "on-primary": "#002e6a",
+                      "surface-bright": "#36393f",
+                      "on-tertiary-container": "#00311f",
+                      "on-background": "#e0e2ea",
+                      "surface": "#101419",
+                      "surface-variant": "#31353b",
+                      "secondary-fixed-dim": "#bdc7d9",
+                      "on-surface": "#e0e2ea",
+                      "secondary-container": "#404a59",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#121c2a",
+                      "outline-variant": "#424754",
+                      "on-secondary": "#27313f",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "tertiary": "#4edea3",
+                      "on-tertiary-fixed": "#002113",
+                      "inverse-surface": "#e0e2ea",
+                      "error": "#ffb4ab",
+                      "on-primary-container": "#00285d",
+                      "surface-container-high": "#262a30"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "container-max": "1120px",
+                      "stack-lg": "64px",
+                      "margin-desktop": "40px",
+                      "stack-md": "24px",
+                      "margin-mobile": "16px",
+                      "stack-sm": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "code-label": [
+                              "JetBrains Mono"
+                      ],
+                      "display-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "button-text": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "code-label": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button-text": [
+                              "15px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      }
+          }
+        }
+    </script>
+<style>
+        body { background-color: #0B0F14; color: #E5E7EB; }
+        .tech-tag {
+            background-color: #1F2937;
+            color: #E5E7EB;
+            border: 1px solid #30363D;
+        }
+        .tech-tag:hover {
+            border-color: #3B82F6;
+            color: #3B82F6;
+        }
+        .terminal-header {
+            background-color: #0B0F14;
+            border-bottom: 1px solid #30363D;
+        }
+        .terminal-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+        .surface-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+        }
+        .surface-card:hover { border-color: #3B82F6; }
+        
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-[#0B0F14] border-b border-[#30363D] z-50">
+<div class="flex justify-between items-center px-margin-desktop py-stack-md max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-stack-sm cursor-pointer hover:text-[#3B82F6] transition-colors duration-200">
+<span class="material-symbols-outlined text-[#3B82F6]">terminal</span>
+<span class="font-headline-md text-headline-md text-[#E5E7EB] font-bold">Портфолио</span>
+</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-button-text text-button-text text-[#3B82F6] border-b-2 border-[#3B82F6] pb-1" href="#">Главная</a>
+<a class="font-button-text text-button-text text-[#E5E7EB] hover:text-[#3B82F6] transition-colors duration-200" href="#">Кейсы</a>
+<a class="font-button-text text-button-text text-[#E5E7EB] hover:text-[#3B82F6] transition-colors duration-200" href="#">Контакты</a>
+</nav>
+<div class="flex md:hidden cursor-pointer active:opacity-80">
+<span class="font-button-text text-button-text text-[#3B82F6]">Меню</span>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-desktop flex flex-col gap-stack-lg py-stack-lg">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row gap-gutter items-center min-h-[614px]">
+<div class="flex-1 flex flex-col gap-stack-md">
+<h1 class="font-display-lg text-display-lg text-[#E5E7EB]">
+                    Fullstack-разработчик: <br/>
+<span class="text-[#3B82F6]">Django + Next.js</span>, <br/>
+                    деплой под ключ
+                </h1>
+<p class="font-body-lg text-body-lg text-[#9CA3AF] max-w-2xl">
+                    Создаю надежные, масштабируемые и производительные веб-решения. От проектирования архитектуры базы данных на PostgreSQL до интерактивных интерфейсов на React. Полный цикл разработки с гарантией стабильной работы.
+                </p>
+<div class="flex gap-stack-sm mt-stack-sm">
+<button class="bg-[#3B82F6] text-white font-button-text text-button-text px-8 py-3 rounded hover:bg-blue-600 transition-colors duration-200">
+                        Обсудить проект
+                    </button>
+<button class="bg-transparent border border-[#30363D] text-[#E5E7EB] font-button-text text-button-text px-8 py-3 rounded hover:border-[#3B82F6] hover:text-[#3B82F6] transition-colors duration-200">
+                        Смотреть кейсы
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<!-- Decorative Graphic / Terminal visual -->
+<div class="surface-card rounded-lg overflow-hidden w-full aspect-video shadow-2xl relative">
+<div class="terminal-header p-3 flex items-center">
+<div class="terminal-dot dot-red"></div>
+<div class="terminal-dot dot-yellow"></div>
+<div class="terminal-dot dot-green"></div>
+<span class="ml-4 font-code-label text-code-label text-[#9CA3AF]">deploy.sh</span>
+</div>
+<div class="p-6 font-code-label text-code-label text-tertiary bg-[#0B0F14] h-full flex flex-col gap-2">
+<p><span class="text-[#3B82F6]">user@server:~$</span> ./deploy_infrastructure.sh</p>
+<p class="text-[#9CA3AF]">[ OK ] Provisioning VPS...</p>
+<p class="text-[#9CA3AF]">[ OK ] Configuring Nginx &amp; SSL...</p>
+<p class="text-[#9CA3AF]">[ OK ] Pulling Docker images...</p>
+<p class="text-[#9CA3AF]">[ OK ] Running DB migrations...</p>
+<p class="text-tertiary-fixed">Deployment successful. System is online.<span class="cursor-blink font-bold text-[#3B82F6]">_</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="flex flex-col gap-stack-md py-stack-lg border-t border-[#30363D]">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-[#3B82F6] text-3xl">memory</span>
+<h2 class="font-headline-md text-headline-md text-[#E5E7EB]">Технологический стек</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-stack-sm">
+<!-- Backend -->
+<div class="surface-card p-6 rounded-lg flex flex-col gap-stack-sm transition-all duration-300">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-body-lg text-body-lg font-bold text-[#E5E7EB]">Backend</h3>
+<span class="material-symbols-outlined text-[#9CA3AF]">dns</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Python ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Django ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ DRF ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ PostgreSQL ]</span>
+</div>
+</div>
+<!-- Frontend -->
+<div class="surface-card p-6 rounded-lg flex flex-col gap-stack-sm transition-all duration-300">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-body-lg text-body-lg font-bold text-[#E5E7EB]">Frontend</h3>
+<span class="material-symbols-outlined text-[#9CA3AF]">web</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Next.js ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ React ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ TypeScript ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Tailwind ]</span>
+</div>
+</div>
+<!-- Infrastructure -->
+<div class="surface-card p-6 rounded-lg flex flex-col gap-stack-sm transition-all duration-300">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-body-lg text-body-lg font-bold text-[#E5E7EB]">Инфраструктура</h3>
+<span class="material-symbols-outlined text-[#9CA3AF]">cloud</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Docker ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ Nginx ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ VPS-деплой ]</span>
+<span class="tech-tag font-code-label text-code-label px-3 py-1 rounded-full">[ CI/CD ]</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Me Section -->
+<section class="flex flex-col gap-stack-md py-stack-lg border-t border-[#30363D] mb-stack-lg">
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="md:w-1/3 flex flex-col gap-stack-sm">
+<span class="material-symbols-outlined text-[#3B82F6] text-3xl">verified_user</span>
+<h2 class="font-headline-md text-headline-md text-[#E5E7EB]">Почему я</h2>
+<p class="font-body-sm text-body-sm text-[#9CA3AF]">
+                         Фокус на бизнес-результат и техническую эстетику. Я не просто пишу код, а решаю задачи продукта от идеи до релиза.
+                     </p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-[#3B82F6] mt-1">all_inclusive</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-[#E5E7EB] mb-1">Полный цикл</h4>
+<p class="font-body-sm text-body-sm text-[#9CA3AF]">Проектирование архитектуры, бэкенд, фронтенд и настройка серверов.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-[#3B82F6] mt-1">payments</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-[#E5E7EB] mb-1">Сложные интеграции</h4>
+<p class="font-body-sm text-body-sm text-[#9CA3AF]">Подключение платежных шлюзов, служб доставки и внешних API.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-[#3B82F6] mt-1">forum</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-[#E5E7EB] mb-1">Прозрачная связь</h4>
+<p class="font-body-sm text-body-sm text-[#9CA3AF]">Регулярные отчеты, понятное объяснение технических деталей бизнесу.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-[#3B82F6] mt-1">support_agent</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-[#E5E7EB] mb-1">Сопровождение</h4>
+<p class="font-body-sm text-body-sm text-[#9CA3AF]">Поддержка проекта после релиза, мониторинг и масштабирование.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-stack-md">
+<button class="bg-transparent border border-[#3B82F6] text-[#3B82F6] font-button-text text-button-text px-8 py-3 rounded hover:bg-[#3B82F6] hover:text-white transition-colors duration-200 flex items-center gap-2">
+                     Смотреть все кейсы
+                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 bg-[#0B0F14] border-t border-[#30363D] mt-auto">
+<div class="flex flex-row justify-between items-center px-margin-desktop py-stack-lg max-w-container-max mx-auto w-full">
+<span class="font-code-label text-code-label text-[#E5E7EB]">© 2024 • dev@portfolio.io</span>
+<nav class="flex gap-gutter items-center">
+<a class="font-body-sm text-body-sm text-[#3B82F6] font-bold hover:text-[#3B82F6] transition-colors duration-200 cursor-pointer" href="#">Главная</a>
+<a class="font-body-sm text-body-sm text-[#E5E7EB] hover:text-[#3B82F6] transition-colors duration-200 cursor-pointer" href="#">Кейсы</a>
+<a class="font-body-sm text-body-sm text-[#E5E7EB] hover:text-[#3B82F6] transition-colors duration-200 cursor-pointer" href="#">Контакты</a>
+</nav>
+</div>
+</footer>
+</body></html>
