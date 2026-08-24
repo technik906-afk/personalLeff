@@ -21,7 +21,7 @@
   --color-primary: var(--primary);
   --color-accent-green: var(--accent-green);
 
-  --font-sans: var(--font-hanken-grotesk);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
   --container-content: 1120px;
