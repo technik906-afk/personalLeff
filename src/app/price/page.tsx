@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Стоимость и сроки разработки сайта",
@@ -14,31 +14,66 @@ const SERVICES = [
     title: "Лендинг / одностраничный сайт",
     timeframe: "от 7 рабочих дней",
     price: "от 18 000 ₽",
+    includes: [
+      "Адаптивная вёрстка (десктоп/мобайл)",
+      "Форма заявки/контакты",
+      "Базовое SEO (метатеги, sitemap)",
+      "Деплой на хостинг",
+    ],
   },
   {
     title: "Интернет-магазин под ключ",
     timeframe: "от 18 рабочих дней",
     price: "от 55 000 ₽",
+    includes: [
+      "Каталог товаров с админкой",
+      "Корзина и оформление заказа",
+      "Приём оплаты",
+      "Интеграция службы доставки",
+      "Деплой на сервер",
+    ],
   },
   {
     title: "Многостраничный сайт-визитка",
     timeframe: "от 12 рабочих дней",
     price: "от 30 000 ₽",
+    includes: [
+      "До 5 страниц (главная, о компании, услуги, контакты + 1 своя)",
+      "Адаптивная вёрстка",
+      "Форма обратной связи",
+      "Базовое SEO",
+    ],
   },
   {
     title: "Редизайн интернет-магазина без отключения на период работ",
     timeframe: "от 5 рабочих дней",
     price: "от 20 000 ₽",
+    includes: [
+      "Обновление интерфейса",
+      "Перенос данных без даунтайма",
+      "Тестирование после переноса",
+    ],
   },
   {
     title: "Личный кабинет с бонусной системой для интернет-магазина",
     timeframe: "от 5 рабочих дней",
     price: "от 18 000 ₽",
+    includes: [
+      "Регистрация и авторизация",
+      "Начисление и списание бонусов",
+      "История заказов в кабинете",
+    ],
   },
   {
     title: "Аудит действующего сайта",
     timeframe: "от 2 рабочих дней",
     price: "от 3 000 ₽",
+    includes: [
+      "Проверка скорости загрузки",
+      "SEO-разбор",
+      "Базовая проверка безопасности",
+      "Отчёт с рекомендациями",
+    ],
   },
 ];
 
@@ -71,19 +106,29 @@ export default function PricePage() {
 
       <div className="rounded-lg border border-surface-border bg-surface divide-y divide-surface-border">
         {SERVICES.map((service) => (
-          <div
-            key={service.title}
-            className="flex items-center justify-between gap-6 p-6"
-          >
-            <div>
-              <div className="text-xs text-muted font-mono mb-1">
-                {service.timeframe}
+          <div key={service.title} className="p-6">
+            <div className="flex items-center justify-between gap-6 mb-4">
+              <div>
+                <div className="text-xs text-muted font-mono mb-1">
+                  {service.timeframe}
+                </div>
+                <div className="font-semibold">{service.title}</div>
               </div>
-              <div className="font-semibold">{service.title}</div>
+              <div className="shrink-0 font-mono text-lg text-primary">
+                {service.price}
+              </div>
             </div>
-            <div className="shrink-0 font-mono text-lg text-primary">
-              {service.price}
-            </div>
+            <ul className="flex flex-col gap-1.5">
+              {service.includes.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-sm text-muted"
+                >
+                  <Check size={14} className="text-primary shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
