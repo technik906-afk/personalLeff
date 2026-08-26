@@ -8,6 +8,7 @@ import { Menu, X, SquareTerminal } from "lucide-react";
 const NAV_ITEMS = [
   { href: "/", label: "Главная" },
   { href: "/cases", label: "Кейсы" },
+  { href: "/price", label: "Цены" },
   { href: "/contacts", label: "Контакты" },
 ];
 
