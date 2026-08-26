@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Send, Mail, ArrowRight } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
+import CalBookButton from "@/components/CalBookButton";
 
 export const metadata: Metadata = {
   title: "Написать разработчику — Telegram, email",
@@ -31,6 +32,7 @@ export default function ContactsPage() {
           value="technik906@gmail.com"
           href="mailto:technik906@gmail.com"
         />
+        <CalBookButton />
       </div>
 
       <div className="mt-6 max-w-lg rounded-lg border border-surface-border bg-surface p-6">
