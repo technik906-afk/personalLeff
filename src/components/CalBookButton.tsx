@@ -23,7 +23,7 @@ export default function CalBookButton() {
       data-cal-namespace={CAL_NAMESPACE}
       data-cal-link={CAL_LINK}
       data-cal-config='{"theme":"dark"}'
-      className="flex items-center gap-4 rounded-lg border border-surface-border bg-surface p-5 hover:border-primary transition-colors text-left w-full"
+      className="flex items-center gap-4 rounded-lg border border-surface-border bg-surface p-5 hover:border-primary transition-colors text-left w-full cursor-pointer"
     >
       <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-background border border-surface-border text-primary">
         <CalendarClock size={18} />
