@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const title = "Лев — Fullstack-разработчик";
 const description =
-  "Разработка сайтов и интернет-магазинов на заказ: от архитектуры бэкенда до деплоя на сервере.";
+  "Разработка сайтов и интернет-магазинов на заказ — от лендинга до готового магазина под ключ.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
