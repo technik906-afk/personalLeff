@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/blog/skolko-stoit-razrabotka-sayta",
     "/blog/konstruktor-ili-razrabotka-s-nulya",
+    "/internet-magazin-na-django",
     "/price",
     "/contacts",
   ];

@@ -3,6 +3,7 @@ export type Service = {
   timeframe: string;
   price: string;
   includes: string[];
+  detailHref?: string;
 };
 
 export const SERVICES: Service[] = [
@@ -28,6 +29,7 @@ export const SERVICES: Service[] = [
       "Интеграция службы доставки",
       "Деплой на сервер",
     ],
+    detailHref: "/internet-magazin-na-django",
   },
   {
     title: "Многостраничный сайт-визитка",

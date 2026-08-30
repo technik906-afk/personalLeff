@@ -137,8 +137,11 @@ export default function ConstructorVsCustomArticle() {
       <ul className="flex flex-col gap-3 mb-16 max-w-2xl">
         <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
           <Check size={16} className="text-primary shrink-0 mt-0.5" />
-          Интернет-магазин с нетиповой логикой каталога, вариантами товаров
-          или собственным конструктором/калькулятором
+          <Link href="/internet-magazin-na-django" className="text-primary hover:underline">
+            Интернет-магазин
+          </Link>{" "}
+          с нетиповой логикой каталога, вариантами товаров или собственным
+          конструктором/калькулятором
         </li>
         <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
           <Check size={16} className="text-primary shrink-0 mt-0.5" />

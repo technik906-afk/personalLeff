@@ -89,6 +89,14 @@ export default function PricePage() {
                 </li>
               ))}
             </ul>
+            {service.detailHref && (
+              <Link
+                href={service.detailHref}
+                className="inline-block mt-4 text-sm text-primary hover:underline"
+              >
+                Подробнее →
+              </Link>
+            )}
           </div>
         ))}
       </div>

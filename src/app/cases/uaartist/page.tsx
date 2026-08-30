@@ -159,15 +159,15 @@ export default function UaartistCaseStudy() {
         <div>
           <h2 className="font-semibold mb-1.5">Нужен похожий магазин?</h2>
           <p className="text-sm text-muted leading-relaxed">
-            Сроки и цены на разработку интернет-магазина под ключ — на
-            странице «Цены».
+            Что входит, сроки и цена на разработку интернет-магазина на
+            Django под ключ.
           </p>
         </div>
         <Link
-          href="/price"
+          href="/internet-magazin-na-django"
           className="inline-flex items-center gap-1.5 rounded bg-primary-strong px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit shrink-0"
         >
-          Смотреть цены
+          Подробнее
           <ArrowRight size={16} />
         </Link>
       </div>
