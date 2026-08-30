@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { SERVICES } from "@/data/services";
+import { SERVICES, parsePriceValue } from "@/data/services";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Интернет-магазин на Django под ключ — цена и сроки",
@@ -12,9 +13,29 @@ export const metadata: Metadata = {
 
 const service = SERVICES.find((s) => s.title === "Интернет-магазин под ключ")!;
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: service.title,
+  provider: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "RUB",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      minPrice: parsePriceValue(service.price),
+      priceCurrency: "RUB",
+    },
+  },
+};
+
 export default function DjangoShopPage() {
   return (
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <h1 className="text-3xl sm:text-4xl font-bold mb-6 max-w-2xl">
         Интернет-магазин на Django под ключ
       </h1>

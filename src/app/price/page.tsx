@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
-import { SERVICES } from "@/data/services";
+import { SERVICES, parsePriceValue } from "@/data/services";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Стоимость и сроки разработки сайта",
@@ -53,9 +54,49 @@ const PAYMENT_STAGES = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const servicesJsonLd = SERVICES.map((service) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: service.title,
+  provider: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "RUB",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      minPrice: parsePriceValue(service.price),
+      priceCurrency: "RUB",
+    },
+  },
+}));
+
 export default function PricePage() {
   return (
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {servicesJsonLd.map((service, index) => (
+        <script
+          key={SERVICES[index].title}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+        />
+      ))}
       <h1 className="text-3xl font-bold mb-4">Стоимость и сроки</h1>
       <p className="text-muted mb-2 max-w-lg">
         Опишите проект в Telegram, и я посчитаю конкретно под него.

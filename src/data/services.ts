@@ -6,6 +6,11 @@ export type Service = {
   detailHref?: string;
 };
 
+// "от 18 000 ₽" -> 18000, для schema.org Offer.priceSpecification.minPrice
+export function parsePriceValue(price: string): number {
+  return parseInt(price.replace(/\D/g, ""), 10);
+}
+
 export const SERVICES: Service[] = [
   {
     title: "Лендинг / одностраничный сайт",
