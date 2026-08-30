@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Как я сделал интернет-магазин uaartist — кейс на Django и Next.js",
@@ -70,14 +71,15 @@ const REMAINING = [
 export default function UaartistCaseStudy() {
   return (
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
-      <Link
-        href="/cases"
-        className="text-sm text-muted hover:text-primary transition-colors"
-      >
-        ← Все кейсы
-      </Link>
+      <Breadcrumbs
+        items={[
+          { label: "Главная", href: "/" },
+          { label: "Кейсы", href: "/cases" },
+          { label: "uaartist" },
+        ]}
+      />
 
-      <h1 className="text-3xl sm:text-4xl font-bold mt-4 mb-3 max-w-3xl">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-3 max-w-3xl">
         Как я сделал интернет-магазин uaartist: от нуля до приёма оплаты
       </h1>
 
