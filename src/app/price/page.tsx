@@ -88,6 +88,31 @@ const SERVICES = [
   },
 ];
 
+const PRICES_UPDATED_AT = "30 августа 2026";
+
+const FAQ_ITEMS = [
+  {
+    question: "Можно ли оплатить не сразу всю сумму?",
+    answer:
+      "Да, оплата делится на 3 этапа: 25% после подписания договора, 45% перед стартом работ, 30% по готовности сайта.",
+  },
+  {
+    question: "Что входит в стоимость?",
+    answer:
+      "Конкретный список — в карточке каждой услуги выше: от адаптивной вёрстки и базового SEO до каталога с админкой и приёма оплаты, в зависимости от типа проекта.",
+  },
+  {
+    question: "Сколько занимает разработка?",
+    answer:
+      "От 2 рабочих дней (аудит) до 18 рабочих дней (интернет-магазин под ключ) — точный срок указан в карточке каждой услуги.",
+  },
+  {
+    question: "Что после сдачи проекта — есть поддержка?",
+    answer:
+      "Да, сопровождение после релиза, мониторинг и масштабирование при необходимости.",
+  },
+];
+
 const PAYMENT_STAGES = [
   {
     step: "1",
@@ -110,9 +135,11 @@ export default function PricePage() {
   return (
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
       <h1 className="text-3xl font-bold mb-4">Стоимость и сроки</h1>
-      <p className="text-muted mb-10 max-w-lg">
-        Цены и сроки ориентировочные — точная оценка зависит от задач.
+      <p className="text-muted mb-2 max-w-lg">
         Опишите проект в Telegram, и я посчитаю конкретно под него.
+      </p>
+      <p className="text-muted text-sm mb-10">
+        Актуально на {PRICES_UPDATED_AT}
       </p>
 
       <div className="rounded-lg border border-surface-border bg-surface divide-y divide-surface-border">
@@ -157,6 +184,16 @@ export default function PricePage() {
             <p className="text-sm text-muted leading-relaxed">
               {stage.description}
             </p>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-16 mb-8">Частые вопросы</h2>
+      <div className="flex flex-col gap-6 max-w-2xl">
+        {FAQ_ITEMS.map((item) => (
+          <div key={item.question}>
+            <h3 className="font-semibold mb-1.5">{item.question}</h3>
+            <p className="text-sm text-muted leading-relaxed">{item.answer}</p>
           </div>
         ))}
       </div>
