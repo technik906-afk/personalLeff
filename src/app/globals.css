@@ -8,6 +8,7 @@
   --foreground: #e5e7eb;
   --muted: #9ca3af;
   --primary: #3b82f6;
+  --primary-strong: #2563eb;
   --accent-green: #10b981;
 }
 
@@ -19,6 +20,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
   --color-accent-green: var(--accent-green);
 
   --font-sans: var(--font-inter);

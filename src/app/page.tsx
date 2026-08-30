@@ -60,7 +60,7 @@ export default function Home() {
               href="https://t.me/leff_live"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded bg-primary px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              className="rounded bg-primary-strong px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             >
               Обсудить проект
             </a>
@@ -131,7 +131,7 @@ export default function Home() {
 
         <Link
           href="/cases"
-          className="inline-block mt-10 rounded border border-primary text-primary px-5 py-3 text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+          className="inline-block mt-10 rounded border border-primary text-primary px-5 py-3 text-sm font-semibold hover:bg-primary-strong hover:text-white transition-colors"
         >
           Смотреть все кейсы →
         </Link>

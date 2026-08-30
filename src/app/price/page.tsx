@@ -150,7 +150,7 @@ export default function PricePage() {
       <div className="grid sm:grid-cols-3 gap-8">
         {PAYMENT_STAGES.map((stage) => (
           <div key={stage.step}>
-            <div className="flex size-8 items-center justify-center rounded-full bg-primary text-white text-sm font-semibold mb-4">
+            <div className="flex size-8 items-center justify-center rounded-full bg-primary-strong text-white text-sm font-semibold mb-4">
               {stage.step}
             </div>
             <h3 className="font-semibold mb-2">{stage.title}</h3>
@@ -163,7 +163,7 @@ export default function PricePage() {
 
       <Link
         href="/contacts"
-        className="inline-flex items-center gap-1.5 mt-16 rounded bg-primary px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
+        className="inline-flex items-center gap-1.5 mt-16 rounded bg-primary-strong px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
       >
         Обсудить проект
         <ArrowRight size={16} />

@@ -2,7 +2,13 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { Case } from "@/data/cases";
 
-export default function CaseCard({ item }: { item: Case }) {
+export default function CaseCard({
+  item,
+  priority,
+}: {
+  item: Case;
+  priority?: boolean;
+}) {
   return (
     <article className="rounded-lg border border-surface-border bg-surface p-6 sm:p-8 overflow-visible">
       <div className="grid md:grid-cols-[1fr_1.3fr] gap-10 items-center">
@@ -35,7 +41,7 @@ export default function CaseCard({ item }: { item: Case }) {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
+            className="inline-flex items-center gap-1.5 rounded bg-primary-strong px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
           >
             Смотреть сайт
             <ArrowUpRight size={16} />
@@ -50,6 +56,9 @@ export default function CaseCard({ item }: { item: Case }) {
               fill
               sizes="(min-width: 768px) 55vw, 100vw"
               className="object-cover object-top"
+              preload={priority}
+              loading={priority ? "eager" : undefined}
+              fetchPriority={priority ? "high" : undefined}
             />
           </div>
 
