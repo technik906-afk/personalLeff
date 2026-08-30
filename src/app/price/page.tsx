@@ -4,11 +4,15 @@ import { ArrowRight, Check } from "lucide-react";
 import { SERVICES, parsePriceValue } from "@/data/services";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
+const title = "Стоимость и сроки разработки сайта";
+const description =
+  "Цены на разработку лендингов, сайтов-визиток, интернет-магазинов и веб-приложений под ключ.";
+
 export const metadata: Metadata = {
-  title: "Стоимость и сроки разработки сайта",
-  description:
-    "Цены на разработку лендингов, сайтов-визиток, интернет-магазинов и веб-приложений под ключ.",
+  title,
+  description,
   alternates: { canonical: "/price" },
+  openGraph: { title, description, url: "/price" },
 };
 
 const PRICES_UPDATED_AT = "30 августа 2026";

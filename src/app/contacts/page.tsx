@@ -4,11 +4,15 @@ import ContactCard from "@/components/ContactCard";
 import CalBookButton from "@/components/CalBookButton";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 
+const title = "Написать разработчику — Telegram, email";
+const description =
+  "Открыт для новых проектов: разработка сайтов и интернет-магазинов под ключ.";
+
 export const metadata: Metadata = {
-  title: "Написать разработчику — Telegram, email",
-  description:
-    "Открыт для новых проектов: разработка сайтов и интернет-магазинов под ключ.",
+  title,
+  description,
   alternates: { canonical: "/contacts" },
+  openGraph: { title, description, url: "/contacts" },
 };
 
 export default function ContactsPage() {

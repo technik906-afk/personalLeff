@@ -3,11 +3,21 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const title = "Конструктор сайта или разработка с нуля — что выбрать";
+const description =
+  "Tilda, WordPress, Wix или свой код: по каким критериям выбирать между конструктором и разработкой с нуля для лендинга, блога и интернет-магазина.";
+
 export const metadata: Metadata = {
-  title: "Конструктор сайта или разработка с нуля — что выбрать",
-  description:
-    "Tilda, WordPress, Wix или свой код: по каким критериям выбирать между конструктором и разработкой с нуля для лендинга, блога и интернет-магазина.",
+  title,
+  description,
   alternates: { canonical: "/blog/konstruktor-ili-razrabotka-s-nulya" },
+  openGraph: {
+    title,
+    description,
+    url: "/blog/konstruktor-ili-razrabotka-s-nulya",
+    type: "article",
+    publishedTime: "2026-08-30T00:00:00.000Z",
+  },
 };
 
 const jsonLd = {

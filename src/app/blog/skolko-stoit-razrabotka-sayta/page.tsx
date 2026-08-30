@@ -4,11 +4,21 @@ import { ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SERVICES } from "@/data/services";
 
+const title = "Сколько стоит разработка сайта в 2026";
+const description =
+  "От 18 000 ₽ за лендинг до 55 000 ₽ и выше за интернет-магазин под ключ. Разбивка по типам проектов и реальный пример на кейсе uaartist.";
+
 export const metadata: Metadata = {
-  title: "Сколько стоит разработка сайта в 2026",
-  description:
-    "От 18 000 ₽ за лендинг до 55 000 ₽ и выше за интернет-магазин под ключ. Разбивка по типам проектов и реальный пример на кейсе uaartist.",
+  title,
+  description,
   alternates: { canonical: "/blog/skolko-stoit-razrabotka-sayta" },
+  openGraph: {
+    title,
+    description,
+    url: "/blog/skolko-stoit-razrabotka-sayta",
+    type: "article",
+    publishedTime: "2026-08-30T00:00:00.000Z",
+  },
 };
 
 const jsonLd = {

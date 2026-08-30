@@ -3,11 +3,15 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { posts } from "@/data/posts";
 
+const title = "Блог — веб-разработка, Django, Next.js";
+const description =
+  "Статьи о разработке сайтов и интернет-магазинов: технологии, цены, разбор реальных проектов.";
+
 export const metadata: Metadata = {
-  title: "Блог — веб-разработка, Django, Next.js",
-  description:
-    "Статьи о разработке сайтов и интернет-магазинов: технологии, цены, разбор реальных проектов.",
+  title,
+  description,
   alternates: { canonical: "/blog" },
+  openGraph: { title, description, url: "/blog" },
 };
 
 export default function BlogPage() {

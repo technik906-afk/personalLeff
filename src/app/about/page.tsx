@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Database, LayoutGrid, Server } from "lucide-react";
 
+const title = "Fullstack-разработчик на Django и Next.js — Лев Алексеев";
+const description =
+  "Год в разработке (Django + DRF, Next.js + TypeScript) после нескольких лет системного администрирования и DevOps в команде с микросервисной архитектурой.";
+
 export const metadata: Metadata = {
-  title: "Fullstack-разработчик на Django и Next.js — Лев Алексеев",
-  description:
-    "Год в разработке (Django + DRF, Next.js + TypeScript) после нескольких лет системного администрирования и DevOps в команде с микросервисной архитектурой.",
+  title,
+  description,
   alternates: { canonical: "/about" },
+  openGraph: { title, description, url: "/about" },
 };
 
 const STACK_GROUPS = [

@@ -3,11 +3,21 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
+const title = "Как я сделал интернет-магазин uaartist — кейс на Django и Next.js";
+const description =
+  "Реальный таймлайн разработки интернет-магазина аксессуаров: Django + DRF, Next.js, ЮKassa, СДЭК/Почта России — от пустого репозитория до продакшена за месяц.";
+
 export const metadata: Metadata = {
-  title: "Как я сделал интернет-магазин uaartist — кейс на Django и Next.js",
-  description:
-    "Реальный таймлайн разработки интернет-магазина аксессуаров: Django + DRF, Next.js, ЮKassa, СДЭК/Почта России — от пустого репозитория до продакшена за месяц.",
+  title,
+  description,
   alternates: { canonical: "/cases/uaartist" },
+  openGraph: {
+    title,
+    description,
+    url: "/cases/uaartist",
+    type: "article",
+    publishedTime: "2026-08-30T00:00:00.000Z",
+  },
 };
 
 const TIMELINE = [

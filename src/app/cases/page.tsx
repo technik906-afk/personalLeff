@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import CaseCard from "@/components/CaseCard";
 import { cases } from "@/data/cases";
 
+const title = "Портфолио: реальные проекты на Django и Next.js";
+const description =
+  "Примеры разработанных сайтов и интернет-магазинов: uaartist, Propheters и демо-лендинги на Next.js.";
+
 export const metadata: Metadata = {
-  title: "Портфолио: реальные проекты на Django и Next.js",
-  description:
-    "Примеры разработанных сайтов и интернет-магазинов: uaartist, Propheters и демо-лендинги на Next.js.",
+  title,
+  description,
   alternates: { canonical: "/cases" },
+  openGraph: { title, description, url: "/cases" },
 };
 
 export default function CasesPage() {

@@ -4,11 +4,15 @@ import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { SERVICES, parsePriceValue } from "@/data/services";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
+const title = "Интернет-магазин на Django под ключ — цена и сроки";
+const description =
+  "От 55 000 ₽, от 18 рабочих дней: каталог, приём оплаты, доставка. Django + DRF + Next.js — стек, проверенный в проде на реальном магазине.";
+
 export const metadata: Metadata = {
-  title: "Интернет-магазин на Django под ключ — цена и сроки",
-  description:
-    "От 55 000 ₽, от 18 рабочих дней: каталог, приём оплаты, доставка. Django + DRF + Next.js — стек, проверенный в проде на реальном магазине.",
+  title,
+  description,
   alternates: { canonical: "/internet-magazin-na-django" },
+  openGraph: { title, description, url: "/internet-magazin-na-django" },
 };
 
 const service = SERVICES.find((s) => s.title === "Интернет-магазин под ключ")!;
