@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Case } from "@/data/cases";
 
@@ -37,15 +38,25 @@ export default function CaseCard({
             {item.description}
           </p>
 
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded bg-primary-strong px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
-          >
-            Смотреть сайт
-            <ArrowUpRight size={16} />
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded bg-primary-strong px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity w-fit"
+            >
+              Смотреть сайт
+              <ArrowUpRight size={16} />
+            </a>
+            {item.caseStudyHref && (
+              <Link
+                href={item.caseStudyHref}
+                className="inline-flex items-center gap-1.5 rounded border border-primary text-primary px-4 py-2.5 text-sm font-semibold hover:bg-primary-strong hover:text-white hover:border-primary-strong transition-colors w-fit"
+              >
+                Читать историю проекта
+              </Link>
+            )}
+          </div>
         </div>
 
         <div className="relative">

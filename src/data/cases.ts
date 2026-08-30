@@ -9,6 +9,7 @@ export type Case = {
   kind: CaseKind;
   desktopImage: string;
   mobileImage?: string;
+  caseStudyHref?: string;
 };
 
 export const cases: Case[] = [
@@ -22,6 +23,7 @@ export const cases: Case[] = [
     kind: "real",
     desktopImage: "/images/uaartist-hero.png",
     mobileImage: "/images/uaartist-mobile-hero.jpg",
+    caseStudyHref: "/cases/uaartist",
   },
   {
     id: "propheters",
