@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Database, LayoutGrid, Server, Infinity as InfinityIcon, MessageSquare, Plug, ShieldCheck } from "lucide-react";
 import TerminalWindow from "@/components/TerminalWindow";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const STACK_GROUPS = [
   {
@@ -56,14 +57,13 @@ export default function Home() {
             до настройки серверов и финального деплоя. Полный цикл разработки.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
+            <TrackedExternalLink
               href="https://t.me/leff_live"
-              target="_blank"
-              rel="noopener noreferrer"
+              goal="telegram_click"
               className="rounded bg-primary-strong px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             >
               Обсудить проект
-            </a>
+            </TrackedExternalLink>
             <Link
               href="/cases"
               className="rounded border border-surface-border-strong px-5 py-3 text-sm font-semibold hover:border-primary transition-colors"

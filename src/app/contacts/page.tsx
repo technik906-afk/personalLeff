@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Send, Mail, ArrowRight } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 import CalBookButton from "@/components/CalBookButton";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 export const metadata: Metadata = {
   title: "Написать разработчику — Telegram, email",
@@ -21,16 +22,18 @@ export default function ContactsPage() {
 
       <div className="flex flex-col gap-4 max-w-lg">
         <ContactCard
-          icon={Send}
+          icon={<Send size={18} />}
           label="Telegram"
           value="@leff_live"
           href="https://t.me/leff_live"
+          goal="telegram_click"
         />
         <ContactCard
-          icon={Mail}
+          icon={<Mail size={18} />}
           label="Email"
           value="technik906@gmail.com"
           href="mailto:technik906@gmail.com"
+          goal="email_click"
         />
         <CalBookButton />
       </div>
@@ -41,15 +44,14 @@ export default function ContactsPage() {
           Беру задачи на разработку сайтов и интернет-магазинов под ключ.
           Расскажите, что нужно сделать — отвечу и предложу план.
         </p>
-        <a
+        <TrackedExternalLink
           href="https://t.me/leff_live"
-          target="_blank"
-          rel="noopener noreferrer"
+          goal="telegram_click"
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
         >
           Написать в Telegram
           <ArrowRight size={16} />
-        </a>
+        </TrackedExternalLink>
       </div>
     </div>
   );
