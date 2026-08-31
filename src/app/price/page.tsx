@@ -104,7 +104,8 @@ export default function PricePage() {
       ))}
       <h1 className="text-3xl font-bold mb-4">Стоимость и сроки</h1>
       <p className="text-muted mb-2 max-w-lg">
-        Опишите проект в Telegram, и я посчитаю конкретно под него.
+        Вилки цен и сроков по всем типам проектов. Точную цену считаю под
+        конкретную задачу — опишите её в Telegram.
       </p>
       <p className="text-muted text-sm mb-10">
         Актуально на {PRICES_UPDATED_AT}
@@ -173,6 +174,34 @@ export default function PricePage() {
           </div>
         ))}
       </div>
+
+      <h2 className="text-2xl font-semibold mt-16 mb-8">Разобраться подробнее</h2>
+      <ul className="flex flex-col gap-3 max-w-2xl">
+        <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
+          <ArrowRight size={16} className="text-primary shrink-0 mt-0.5" />
+          <span>
+            <Link
+              href="/blog/skolko-stoit-razrabotka-sayta"
+              className="text-primary hover:underline"
+            >
+              От чего зависит цена проекта и как читать смету
+            </Link>{" "}
+            — разбор в блоге
+          </span>
+        </li>
+        <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
+          <ArrowRight size={16} className="text-primary shrink-0 mt-0.5" />
+          <span>
+            <Link
+              href="/internet-magazin-na-django"
+              className="text-primary hover:underline"
+            >
+              Интернет-магазин на Django под ключ
+            </Link>{" "}
+            — что входит, сроки и стек по этому типу проектов
+          </span>
+        </li>
+      </ul>
 
       <Link
         href="/contacts"

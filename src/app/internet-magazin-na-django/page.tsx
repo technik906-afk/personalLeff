@@ -109,13 +109,22 @@ export default function DjangoShopPage() {
         </Link>
       </div>
 
-      <Link
-        href="/price"
-        className="inline-flex items-center gap-1.5 mt-10 text-sm text-primary hover:underline"
-      >
-        Смотреть цены на остальные типы проектов
-        <ArrowUpRight size={14} />
-      </Link>
+      <div className="flex flex-col items-start gap-3 mt-10">
+        <Link
+          href="/price"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+        >
+          Смотреть цены на остальные типы проектов
+          <ArrowUpRight size={14} />
+        </Link>
+        <Link
+          href="/blog/skolko-stoit-razrabotka-sayta"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+        >
+          От чего зависит цена разработки — разбор в блоге
+          <ArrowUpRight size={14} />
+        </Link>
+      </div>
     </div>
   );
 }
