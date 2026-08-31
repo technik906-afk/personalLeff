@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/about" },
   openGraph: { title, description, url: "/about" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 const STACK_GROUPS = [

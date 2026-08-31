@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/internet-magazin-na-django" },
   openGraph: { title, description, url: "/internet-magazin-na-django" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 const service = SERVICES.find((s) => s.title === "Интернет-магазин под ключ")!;

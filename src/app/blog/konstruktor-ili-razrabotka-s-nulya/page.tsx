@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-08-30T00:00:00.000Z",
   },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 const jsonLd = {

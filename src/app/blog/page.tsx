@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/blog" },
   openGraph: { title, description, url: "/blog" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function BlogPage() {

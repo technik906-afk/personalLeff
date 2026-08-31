@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/price" },
   openGraph: { title, description, url: "/price" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 const PRICES_UPDATED_AT = "30 августа 2026";
