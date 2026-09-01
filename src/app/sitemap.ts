@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/konstruktor-ili-razrabotka-s-nulya",
     "/internet-magazin-na-django",
     "/price",
+    "/calculator",
     "/contacts",
   ];
 

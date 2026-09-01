@@ -107,9 +107,22 @@ export default function PricePage() {
         Вилки цен и сроков по всем типам проектов. Точную цену считаю под
         конкретную задачу — опишите её в Telegram.
       </p>
-      <p className="text-muted text-sm mb-10">
+      <p className="text-muted text-sm mb-8">
         Актуально на {PRICES_UPDATED_AT}
       </p>
+
+      <Link
+        href="/calculator"
+        className="flex items-center justify-between gap-4 rounded-lg border border-surface-border bg-surface p-5 mb-10 hover:border-primary transition-colors"
+      >
+        <span className="text-sm leading-relaxed">
+          <span className="font-semibold">Прикинуть бюджет за минуту</span>
+          <span className="block text-muted">
+            Соберите примерную цену из блоков в калькуляторе
+          </span>
+        </span>
+        <ArrowRight size={18} className="text-primary shrink-0" />
+      </Link>
 
       <div className="rounded-lg border border-surface-border bg-surface divide-y divide-surface-border">
         {SERVICES.map((service) => (

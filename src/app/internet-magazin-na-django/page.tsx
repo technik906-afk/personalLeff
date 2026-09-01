@@ -124,6 +124,13 @@ export default function DjangoShopPage() {
           От чего зависит цена разработки — разбор в блоге
           <ArrowUpRight size={14} />
         </Link>
+        <Link
+          href="/calculator"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+        >
+          Собрать примерную цену в калькуляторе
+          <ArrowUpRight size={14} />
+        </Link>
       </div>
     </div>
   );
