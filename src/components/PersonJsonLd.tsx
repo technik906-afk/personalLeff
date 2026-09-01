@@ -1,4 +1,4 @@
-import { SITE_URL, TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
+import { SITE_URL, TENCHAT_URL, VK_GROUP_URL, GITHUB_URL } from "@/lib/site";
 
 export default function PersonJsonLd() {
   const data = {
@@ -11,6 +11,7 @@ export default function PersonJsonLd() {
     sameAs: [
       "https://t.me/leff_live",
       "https://uaartist.ru",
+      GITHUB_URL,
       TENCHAT_URL,
       VK_GROUP_URL,
     ],

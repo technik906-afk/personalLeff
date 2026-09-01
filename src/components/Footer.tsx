@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
+import { TENCHAT_URL, VK_GROUP_URL, GITHUB_URL } from "@/lib/site";
 
 const NAV_ITEMS = [
   { href: "/", label: "Главная" },
@@ -31,7 +31,15 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              GitHub
+            </a>
             <a
               href={TENCHAT_URL}
               target="_blank"

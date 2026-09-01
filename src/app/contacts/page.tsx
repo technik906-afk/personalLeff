@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Send, Mail, ArrowRight, Newspaper, Users } from "lucide-react";
+import { Send, Mail, ArrowRight, Newspaper, Users, Code2 } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 import CalBookButton from "@/components/CalBookButton";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
+import { TENCHAT_URL, VK_GROUP_URL, GITHUB_URL } from "@/lib/site";
 
 const title = "Написать разработчику — Telegram, email";
 const description =
@@ -73,6 +73,12 @@ export default function ContactsPage() {
           label="ВКонтакте"
           value="vk.ru"
           href={VK_GROUP_URL}
+        />
+        <ContactCard
+          icon={<Code2 size={18} />}
+          label="GitHub"
+          value="github.com"
+          href={GITHUB_URL}
         />
       </div>
     </div>
