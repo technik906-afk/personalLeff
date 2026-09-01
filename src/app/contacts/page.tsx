@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Send, Mail, ArrowRight } from "lucide-react";
+import { Send, Mail, ArrowRight, Newspaper, Users } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 import CalBookButton from "@/components/CalBookButton";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
+import { TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
 
 const title = "Написать разработчику — Telegram, email";
 const description =
@@ -57,6 +58,22 @@ export default function ContactsPage() {
           Написать в Telegram
           <ArrowRight size={16} />
         </TrackedExternalLink>
+      </div>
+
+      <h2 className="text-lg font-semibold mt-12 mb-4">Соцсети</h2>
+      <div className="flex flex-col gap-4 max-w-lg">
+        <ContactCard
+          icon={<Newspaper size={18} />}
+          label="TenChat"
+          value="tenchat.ru"
+          href={TENCHAT_URL}
+        />
+        <ContactCard
+          icon={<Users size={18} />}
+          label="ВКонтакте"
+          value="vk.ru"
+          href={VK_GROUP_URL}
+        />
       </div>
     </div>
   );

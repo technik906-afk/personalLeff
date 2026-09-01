@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
 
 export default function PersonJsonLd() {
   const data = {
@@ -8,7 +8,12 @@ export default function PersonJsonLd() {
     url: SITE_URL,
     jobTitle: "Fullstack-разработчик",
     knowsAbout: ["Django", "Next.js", "TypeScript", "PostgreSQL", "Docker"],
-    sameAs: ["https://t.me/leff_live", "https://uaartist.ru"],
+    sameAs: [
+      "https://t.me/leff_live",
+      "https://uaartist.ru",
+      TENCHAT_URL,
+      VK_GROUP_URL,
+    ],
   };
 
   return (

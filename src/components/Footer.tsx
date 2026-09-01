@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TENCHAT_URL, VK_GROUP_URL } from "@/lib/site";
 
 const NAV_ITEMS = [
   { href: "/", label: "Главная" },
@@ -18,17 +19,37 @@ export default function Footer() {
         <span>
           © {year} · technik906@gmail.com
         </span>
-        <nav className="flex items-center gap-6">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="hover:text-primary transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex items-center gap-4">
+            <a
+              href={TENCHAT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+              TenChat
+            </a>
+            <a
+              href={VK_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              ВКонтакте
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
