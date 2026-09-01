@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Database, LayoutGrid, Server, Infinity as InfinityIcon, MessageSquare, Plug, ShieldCheck } from "lucide-react";
+import { Database, LayoutGrid, Server, Infinity as InfinityIcon, MessageSquare, Plug, ShieldCheck, ShoppingCart, AppWindow, Gauge } from "lucide-react";
 import TerminalWindow from "@/components/TerminalWindow";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 
@@ -18,6 +18,34 @@ const STACK_GROUPS = [
     title: "Инфраструктура",
     icon: Server,
     tags: ["Docker", "Nginx", "VPS-деплой"],
+  },
+];
+
+const SERVICES_SUMMARY = [
+  {
+    icon: ShoppingCart,
+    title: "Интернет-магазины на Django под ключ",
+    description:
+      "Каталог с админкой, корзина, приём оплаты, интеграция службы доставки, деплой на сервер.",
+    href: "/internet-magazin-na-django",
+  },
+  {
+    icon: LayoutGrid,
+    title: "Лендинги и сайты-визитки",
+    description:
+      "Адаптивная вёрстка, формы заявок, базовое SEO и деплой на хостинг.",
+  },
+  {
+    icon: AppWindow,
+    title: "Веб-приложения под задачу",
+    description:
+      "Проектирование логики, собственный бэкенд и база данных, авторизация и личный кабинет.",
+  },
+  {
+    icon: Gauge,
+    title: "Аудит действующего сайта",
+    description:
+      "Проверка скорости, SEO-разбор, базовая проверка безопасности и отчёт с рекомендациями.",
   },
 ];
 
@@ -84,6 +112,41 @@ export default function Home() {
             { text: "Deployment successful. System is online.", tone: "success" },
           ]}
         />
+      </section>
+
+      <section className="py-16 border-t border-surface-border">
+        <h2 className="text-2xl font-semibold mb-8">Что я делаю</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {SERVICES_SUMMARY.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-lg border border-surface-border bg-surface p-6"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <item.icon size={18} className="text-primary shrink-0" />
+                <h3 className="font-semibold">{item.title}</h3>
+              </div>
+              <p className="text-sm text-muted leading-relaxed">
+                {item.description}
+              </p>
+              {item.href && (
+                <Link
+                  href={item.href}
+                  className="inline-block mt-3 text-sm text-primary hover:underline"
+                >
+                  Подробнее →
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <Link
+          href="/price"
+          className="inline-block mt-10 rounded border border-primary text-primary px-5 py-3 text-sm font-semibold hover:bg-primary-strong hover:text-white transition-colors"
+        >
+          Все услуги и цены →
+        </Link>
       </section>
 
       <section className="py-16 border-t border-surface-border">
