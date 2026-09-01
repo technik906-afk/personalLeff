@@ -29,11 +29,12 @@ export const cases: Case[] = [
     id: "propheters",
     title: "Лендинг метал-кор группы The Propheters",
     description:
-      "Медиа-грид на главной, ссылки на стриминги и соцсети, страница контактов.",
+      "Дизайн с нуля, вёрстка на Next.js, анимации, медиа-грид, ссылки на стриминги и соцсети, страница контактов.",
     stack: ["Next.js"],
     url: "https://propheters.vercel.app",
     kind: "real",
     desktopImage: "/images/propheters-hero.png",
+    caseStudyHref: "/cases/propheters",
   },
   {
     id: "prosvet",

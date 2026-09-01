@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/cases",
     "/cases/uaartist",
+    "/cases/propheters",
     "/blog",
     "/blog/skolko-stoit-razrabotka-sayta",
     "/blog/konstruktor-ili-razrabotka-s-nulya",
