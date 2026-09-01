@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { OG_BASE } from "@/lib/site";
 
 const title = "Как я сделал интернет-магазин uaartist — кейс на Django и Next.js";
 const description =
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/cases/uaartist" },
   openGraph: {
+    ...OG_BASE,
     title,
     description,
     url: "/cases/uaartist",

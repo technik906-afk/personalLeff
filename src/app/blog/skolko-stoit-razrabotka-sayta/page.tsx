@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedLinks from "@/components/RelatedLinks";
 import { SERVICES } from "@/data/services";
+import { SITE_URL, SITE_NAME, OG_BASE } from "@/lib/site";
 
+const path = "/blog/skolko-stoit-razrabotka-sayta";
 const title = "Сколько стоит разработка сайта в 2026";
 const description =
   "От чего зависит цена разработки сайта, как читать смету и не ошибиться с бюджетом. Вилки по типам проектов и реальный пример на кейсе uaartist.";
@@ -11,11 +14,12 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/blog/skolko-stoit-razrabotka-sayta" },
+  alternates: { canonical: path },
   openGraph: {
+    ...OG_BASE,
     title,
     description,
-    url: "/blog/skolko-stoit-razrabotka-sayta",
+    url: path,
     type: "article",
     publishedTime: "2026-08-30T00:00:00.000Z",
     modifiedTime: "2026-08-31T00:00:00.000Z",
@@ -29,7 +33,10 @@ const jsonLd = {
   headline: "Сколько стоит разработка сайта в 2026",
   datePublished: "2026-08-30",
   dateModified: "2026-08-31",
-  author: { "@type": "Person", name: "Лев Алексеев" },
+  image: [`${SITE_URL}${path}/opengraph-image`],
+  author: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  publisher: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  mainEntityOfPage: `${SITE_URL}${path}`,
 };
 
 const PRICE_FACTORS = [
@@ -285,45 +292,25 @@ export default function PricingArticle() {
         </Link>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-16 mb-6">Ещё по теме</h2>
-      <ul className="flex flex-col gap-3 max-w-2xl">
-        <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
-          <ArrowUpRight size={16} className="text-primary shrink-0 mt-0.5" />
-          <span>
-            <Link
-              href="/internet-magazin-na-django"
-              className="text-primary hover:underline"
-            >
-              Интернет-магазин на Django под ключ
-            </Link>{" "}
-            — цена, сроки и что входит именно по этому типу проектов
-          </span>
-        </li>
-        <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
-          <ArrowUpRight size={16} className="text-primary shrink-0 mt-0.5" />
-          <span>
-            <Link
-              href="/blog/konstruktor-ili-razrabotka-s-nulya"
-              className="text-primary hover:underline"
-            >
-              Конструктор сайта или разработка с нуля
-            </Link>{" "}
-            — на чём можно сэкономить, а на чём выйдет дороже
-          </span>
-        </li>
-        <li className="flex items-start gap-2.5 text-sm text-muted leading-relaxed">
-          <ArrowUpRight size={16} className="text-primary shrink-0 mt-0.5" />
-          <span>
-            <Link
-              href="/cases/uaartist"
-              className="text-primary hover:underline"
-            >
-              Кейс uaartist
-            </Link>{" "}
-            — полный таймлайн разработки магазина с датами и решениями
-          </span>
-        </li>
-      </ul>
+      <RelatedLinks
+        items={[
+          {
+            href: "/internet-magazin-na-django",
+            label: "Интернет-магазин на Django под ключ",
+            note: "цена, сроки и что входит именно по этому типу проектов",
+          },
+          {
+            href: "/blog/konstruktor-ili-razrabotka-s-nulya",
+            label: "Конструктор сайта или разработка с нуля",
+            note: "на чём можно сэкономить, а на чём выйдет дороже",
+          },
+          {
+            href: "/cases/uaartist",
+            label: "Кейс uaartist",
+            note: "полный таймлайн разработки магазина с датами и решениями",
+          },
+        ]}
+      />
     </div>
   );
 }

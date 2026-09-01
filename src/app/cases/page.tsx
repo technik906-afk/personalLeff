@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CaseCard from "@/components/CaseCard";
 import { cases } from "@/data/cases";
+import { OG_BASE } from "@/lib/site";
 
 const title = "Портфолио: реальные проекты на Django и Next.js";
 const description =
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/cases" },
-  openGraph: { title, description, url: "/cases" },
+  openGraph: { ...OG_BASE, title, description, url: "/cases" },
   twitter: { card: "summary_large_image", title, description },
 };
 

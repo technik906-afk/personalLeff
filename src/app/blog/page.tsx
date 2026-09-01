@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { posts } from "@/data/posts";
+import { OG_BASE } from "@/lib/site";
 
 const title = "Блог — веб-разработка, Django, Next.js";
 const description =
@@ -10,8 +11,11 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/blog" },
-  openGraph: { title, description, url: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    types: { "application/rss+xml": "/blog/rss.xml" },
+  },
+  openGraph: { ...OG_BASE, title, description, url: "/blog" },
   twitter: { card: "summary_large_image", title, description },
 };
 

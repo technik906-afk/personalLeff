@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Database, LayoutGrid, Server } from "lucide-react";
+import { OG_BASE } from "@/lib/site";
 
 const title = "Fullstack-разработчик на Django и Next.js — Лев Алексеев";
 const description =
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/about" },
-  openGraph: { title, description, url: "/about" },
+  openGraph: { ...OG_BASE, title, description, url: "/about" },
   twitter: { card: "summary_large_image", title, description },
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { SERVICES, parsePriceValue } from "@/data/services";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_URL, OG_BASE } from "@/lib/site";
 
 const title = "Интернет-магазин на Django под ключ — цена и сроки";
 const description =
@@ -12,7 +12,12 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/internet-magazin-na-django" },
-  openGraph: { title, description, url: "/internet-magazin-na-django" },
+  openGraph: {
+    ...OG_BASE,
+    title,
+    description,
+    url: "/internet-magazin-na-django",
+  },
   twitter: { card: "summary_large_image", title, description },
 };
 

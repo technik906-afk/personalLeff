@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { SERVICES, parsePriceValue } from "@/data/services";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_URL, OG_BASE } from "@/lib/site";
 
 const title = "Стоимость и сроки разработки сайта";
 const description =
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/price" },
-  openGraph: { title, description, url: "/price" },
+  openGraph: { ...OG_BASE, title, description, url: "/price" },
   twitter: { card: "summary_large_image", title, description },
 };
 

@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Calculator from "@/components/Calculator";
 import { CALC_UPDATED_AT } from "@/data/calculator";
+import { OG_BASE } from "@/lib/site";
 
 const title = "Калькулятор стоимости сайта";
 const description =
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/calculator" },
-  openGraph: { title, description, url: "/calculator" },
+  openGraph: { ...OG_BASE, title, description, url: "/calculator" },
   twitter: { card: "summary_large_image", title, description },
 };
 

@@ -3,7 +3,7 @@ import { Send, Mail, ArrowRight, Newspaper, Users, Code2 } from "lucide-react";
 import ContactCard from "@/components/ContactCard";
 import CalBookButton from "@/components/CalBookButton";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { TENCHAT_URL, VK_GROUP_URL, GITHUB_URL } from "@/lib/site";
+import { TENCHAT_URL, VK_GROUP_URL, GITHUB_URL, OG_BASE } from "@/lib/site";
 
 const title = "Написать разработчику — Telegram, email";
 const description =
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/contacts" },
-  openGraph: { title, description, url: "/contacts" },
+  openGraph: { ...OG_BASE, title, description, url: "/contacts" },
   twitter: { card: "summary_large_image", title, description },
 };
 

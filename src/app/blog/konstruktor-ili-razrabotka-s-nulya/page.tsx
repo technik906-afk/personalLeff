@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedLinks from "@/components/RelatedLinks";
+import { SITE_URL, SITE_NAME, OG_BASE } from "@/lib/site";
 
+const path = "/blog/konstruktor-ili-razrabotka-s-nulya";
 const title = "Конструктор сайта или разработка с нуля — что выбрать";
 const description =
   "Tilda, WordPress, Wix или свой код: по каким критериям выбирать между конструктором и разработкой с нуля для лендинга, блога и интернет-магазина.";
@@ -10,11 +13,12 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/blog/konstruktor-ili-razrabotka-s-nulya" },
+  alternates: { canonical: path },
   openGraph: {
+    ...OG_BASE,
     title,
     description,
-    url: "/blog/konstruktor-ili-razrabotka-s-nulya",
+    url: path,
     type: "article",
     publishedTime: "2026-08-30T00:00:00.000Z",
   },
@@ -27,7 +31,10 @@ const jsonLd = {
   headline: "Конструктор сайта или разработка с нуля — что выбрать",
   datePublished: "2026-08-30",
   dateModified: "2026-08-30",
-  author: { "@type": "Person", name: "Лев Алексеев" },
+  image: [`${SITE_URL}${path}/opengraph-image`],
+  author: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  publisher: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+  mainEntityOfPage: `${SITE_URL}${path}`,
 };
 
 const CRITERIA = [
@@ -177,7 +184,7 @@ export default function ConstructorVsCustomArticle() {
         <div>
           <h2 className="font-semibold mb-1.5">Не уверены, что подойдёт?</h2>
           <p className="text-sm text-muted leading-relaxed">
-            Опишите задачу — скажу честно, нужен ли в вашем случае конструктор
+            Опишите задачу — подскажу, нужен ли в вашем случае конструктор
             или разработка с нуля.
           </p>
         </div>
@@ -189,6 +196,21 @@ export default function ConstructorVsCustomArticle() {
           <ArrowRight size={16} />
         </Link>
       </div>
+
+      <RelatedLinks
+        items={[
+          {
+            href: "/blog/skolko-stoit-razrabotka-sayta",
+            label: "Сколько стоит разработка сайта",
+            note: "вилки цен, из чего складывается срок, частые ошибки в бюджете",
+          },
+          {
+            href: "/internet-magazin-na-django",
+            label: "Интернет-магазин на Django под ключ",
+            note: "что входит, сроки и стек по этому типу проектов",
+          },
+        ]}
+      />
     </div>
   );
 }
