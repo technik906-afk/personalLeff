@@ -78,7 +78,10 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 items-center py-16 sm:py-24">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            Fullstack-разработчик
+            Веб-разработка на Django и Next.js
+            <span className="block text-xl sm:text-2xl font-normal text-muted mt-3">
+              Сайты, интернет-магазины, веб-приложения
+            </span>
           </h1>
           <p className="text-muted text-lg leading-relaxed">
             Создаю надёжные веб-решения для бизнеса — от архитектуры бэкенда

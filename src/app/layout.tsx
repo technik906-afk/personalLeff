@@ -18,9 +18,10 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const title = "Лев — Fullstack-разработчик";
+const title =
+  "Веб-разработка на Django и Next.js: сайты, интернет-магазины, веб-приложения";
 const description =
-  "Разработка сайтов и интернет-магазинов на заказ — от лендинга до готового магазина под ключ.";
+  "Разработка сайтов, интернет-магазинов и веб-приложений на Django и Next.js — от лендинга до готового проекта под ключ.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
