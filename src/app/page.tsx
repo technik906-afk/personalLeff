@@ -77,12 +77,14 @@ export default function Home() {
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10">
       <section className="grid md:grid-cols-2 gap-10 items-center py-16 sm:py-24">
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            Веб-разработка на Django и Next.js
-            <span className="block text-xl sm:text-2xl font-normal text-muted mt-3">
+          <div className="flex flex-col gap-3">
+            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+              Веб-разработка на Django и Next.js
+            </h1>
+            <p className="text-xl sm:text-2xl text-muted leading-snug">
               Сайты, интернет-магазины, веб-приложения
-            </span>
-          </h1>
+            </p>
+          </div>
           <p className="text-muted text-lg leading-relaxed">
             Создаю надёжные веб-решения для бизнеса — от архитектуры бэкенда
             до настройки серверов и финального деплоя. Полный цикл разработки.

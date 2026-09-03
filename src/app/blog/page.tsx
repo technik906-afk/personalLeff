@@ -24,7 +24,9 @@ export default function BlogPage() {
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
       <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Блог" }]} />
 
-      <h1 className="text-3xl font-bold mb-10">Блог</h1>
+      <h1 className="text-3xl font-bold mb-10 max-w-3xl">
+        Блог о разработке сайтов и интернет-магазинов
+      </h1>
 
       {posts.length === 0 ? (
         <p className="text-muted">Первые статьи скоро появятся здесь.</p>

@@ -102,7 +102,9 @@ export default function PricePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
         />
       ))}
-      <h1 className="text-3xl font-bold mb-4">Стоимость и сроки</h1>
+      <h1 className="text-3xl font-bold mb-4">
+        Стоимость и сроки разработки сайта
+      </h1>
       <p className="text-muted mb-2 max-w-lg">
         Вилки цен и сроков по всем типам проектов. Точную цену считаю под
         конкретную задачу — опишите её в Telegram.

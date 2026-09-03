@@ -28,7 +28,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Конструктор сайта или разработка с нуля — что выбрать",
+  headline:
+    "Конструктор сайта (Tilda, WordPress, Wix) или разработка с нуля — что выбрать",
   datePublished: "2026-08-30",
   dateModified: "2026-08-30",
   image: [`${SITE_URL}${path}/opengraph-image`],

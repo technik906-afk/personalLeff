@@ -6,7 +6,7 @@ import Calculator from "@/components/Calculator";
 import { CALC_UPDATED_AT } from "@/data/calculator";
 import { OG_BASE } from "@/lib/site";
 
-const title = "Калькулятор стоимости сайта";
+const title = "Калькулятор стоимости разработки сайта — расчёт онлайн";
 const description =
   "Прикидка бюджета на разработку сайта: количество страниц, интернет-магазин, личный кабинет, блог. Примерная цена сразу, без заявки.";
 
