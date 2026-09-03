@@ -22,8 +22,13 @@ export function GET(): Response {
   const sorted = [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+  // «последнее изменение канала» — самая свежая из дат публикации/обновления постов
   const lastBuild = sorted.length
-    ? new Date(sorted[0].date).toUTCString()
+    ? new Date(
+        Math.max(
+          ...posts.map((p) => new Date(p.updated ?? p.date).getTime())
+        )
+      ).toUTCString()
     : new Date(0).toUTCString();
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

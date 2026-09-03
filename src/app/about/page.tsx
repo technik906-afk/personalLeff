@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Database, LayoutGrid, Server } from "lucide-react";
-import { OG_BASE } from "@/lib/site";
+import { OG_BASE, SITE_URL } from "@/lib/site";
+import { PERSON_ID } from "@/components/PersonJsonLd";
 
 const title = "Fullstack-разработчик на Django и Next.js — Лев Алексеев";
 const description =
@@ -33,9 +34,23 @@ const STACK_GROUPS = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/about`,
+  url: `${SITE_URL}/about`,
+  name: "Fullstack-разработчик на Django и Next.js — Лев Алексеев",
+  inLanguage: "ru-RU",
+  mainEntity: { "@id": PERSON_ID },
+};
+
 export default function AboutPage() {
   return (
     <div className="max-w-(--container-content) mx-auto px-4 sm:px-10 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-3xl sm:text-4xl font-bold mb-6 max-w-2xl">
         Fullstack-разработчик на Django и Next.js
       </h1>

@@ -4,6 +4,8 @@ export type Post = {
   excerpt: string;
   /** ISO-дата публикации, для RSS и разметки */
   date: string;
+  /** ISO-дата последнего существенного обновления контента, если было */
+  updated?: string;
   /** та же дата в человекочитаемом виде, для UI */
   publishedAt: string;
   href: string;
@@ -16,6 +18,7 @@ export const posts: Post[] = [
     excerpt:
       "От 18 000 ₽ за лендинг до 55 000 ₽ за магазин под ключ. От чего зависит итоговая цена, из чего складывается срок и частые ошибки в бюджете — на примере кейса uaartist.",
     date: "2026-08-30",
+    updated: "2026-08-31",
     publishedAt: "30 августа 2026",
     href: "/blog/skolko-stoit-razrabotka-sayta",
   },

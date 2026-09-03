@@ -16,6 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500"],
+  // моношрифт — только вторичный текст (даты, теги, терминал), не влияет на LCP:
+  // грузим по мере надобности, не префетчим
+  preload: false,
 });
 
 const title =

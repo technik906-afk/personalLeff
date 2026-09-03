@@ -1,26 +1,32 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
+import { posts } from "@/data/posts";
+
+// Дата последнего осмысленного изменения контента страницы (не билда).
+// Правится руками при правках; для статей блога берётся из posts.ts.
+const STATIC_PAGES: Record<string, string> = {
+  "/": "2026-09-01",
+  "/about": "2026-08-30",
+  "/cases": "2026-09-01",
+  "/cases/uaartist": "2026-08-30",
+  "/cases/propheters": "2026-09-01",
+  "/blog": "2026-09-01",
+  "/internet-magazin-na-django": "2026-08-31",
+  "/price": "2026-09-01",
+  "/calculator": "2026-09-01",
+  "/contacts": "2026-08-24",
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    "",
-    "/about",
-    "/cases",
-    "/cases/uaartist",
-    "/cases/propheters",
-    "/blog",
-    "/blog/skolko-stoit-razrabotka-sayta",
-    "/blog/konstruktor-ili-razrabotka-s-nulya",
-    "/internet-magazin-na-django",
-    "/price",
-    "/calculator",
-    "/contacts",
-  ];
-
-  return routes.map((route) => ({
-    url: `${SITE_URL}${route}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: route === "" ? 1 : 0.8,
+  const staticEntries = Object.entries(STATIC_PAGES).map(([path, date]) => ({
+    url: `${SITE_URL}${path === "/" ? "" : path}`,
+    lastModified: new Date(date),
   }));
+
+  const postEntries = posts.map((post) => ({
+    url: `${SITE_URL}${post.href}`,
+    lastModified: new Date(post.updated ?? post.date),
+  }));
+
+  return [...staticEntries, ...postEntries];
 }
