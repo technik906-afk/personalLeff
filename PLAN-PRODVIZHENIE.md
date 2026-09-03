@@ -250,10 +250,17 @@
 
 **H3 («нет верификации, ничего не в индексе») — мимо:** опровергается скрином Google Search Console от пользователя (2 страницы в индексе, остальные Discovered). `site:` для этого домена ненадёжен — известно.
 
+**Мелочи — сделаны 01.09.2026** (коммит `fix: sitemap lastmod, font preload, WebSite/ProfilePage schema`):
+- M6 — `sitemap.ts` переписан: per-page реальные даты (карта `STATIC_PAGES` + `updated`/`date` из `posts.ts`), убраны `changefreq`/`priority` (Google их игнорит).
+- L1 — `JetBrains_Mono` с `preload: false` (моношрифт — вторичный текст, не LCP). Префетч шрифтов 4 → 2.
+- L5 — добавлен узел `WebSite` в `@graph` (`PersonJsonLd`), `ProfilePage` на `/about` с `mainEntity` → `#person`. `Person.image` пропущен — нет фото.
+- N1 (RSS `lastBuildDate`) — теперь считается по `max(updated ?? date)` постов, показывает 31.08.
+- Баг футерной навигации на 360px — уже был закрыт (`flex-wrap` в `Footer.tsx`).
+
 **Отложено (выбор пользователя / бэклог):**
 - H1 — тонкий контент на money-страницах (`/price` 417 сл., `/internet-magazin-na-django` 224). Главная цель для наполнения. Отложено пользователем — «риск налить воды».
 - M3 — аудит настаивает на хабе «Услуги» в навигации; расходится с нашим решением (меню и так 6 пунктов, `/price` фактически хаб). Решение за пользователем.
 - M5 — детальные страницы для 3 демо-кейсов (Просвет, Пур Пур ×2); поднять Propheters к глубине uaartist.
-- M6 — реальный per-page `lastmod` в sitemap.
-- L1 — сабсет шрифтов (4 woff2 в preload).
-- L5 остаток — `WebSite`/`ProfilePage`-схема, `Person.image`.
+- Внешние сигналы: бэклинки (GitHub Website/README, dev.to, Хабр, ссылка на домен из статьи TenChat и группы ВК), профили на биржах, Domain property в GSC, регион сайта в Яндексе, Bing Webmaster.
+- Сигналы доверия: ни одного отзыва клиента на сайте.
+- Контент: всего 2 статьи — мало для тематического кластера.
